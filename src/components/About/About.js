@@ -10,25 +10,24 @@ import Toolstack from "./Toolstack";
 function About() {
   return (
     <Container fluid className="about-section">
-      <Particle />
       <Container>
-        <Row style={{ justifyContent: "center", padding: "10px" }}>
+        <Row style={{ justifyContent: "center", padding: "0px" }}>
           <Col
             md={7}
             style={{
-              justifyContent: "center",
+              justifyContent: "left",
               paddingTop: "30px",
               paddingBottom: "50px",
             }}
           >
-            <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              Know Who <strong className="purple">I'M</strong>
+            <h1 class-name="about-me" style={{ justifyContent: "left", fontSize: "2.1em", paddingBottom: "20px", paddingLeft: "15px" }}>
+              About <strong className="purple"> Me</strong>
             </h1>
             <Aboutcard />
           </Col>
           <Col
-            md={5}
-            style={{ paddingTop: "120px", paddingBottom: "50px" }}
+            md={4}
+            style={{ paddingTop: "0px", paddingBottom: "50px", verticalAlign: "top", paddingLeft: "40px" }}
             className="about-img"
           >
             <img src={laptopImg} alt="about" className="img-fluid" />
@@ -40,12 +39,12 @@ function About() {
 
         <Techstack />
 
-        <h1 className="project-heading">
+        {/* <h1 className="project-heading">
           <strong className="purple">Tools</strong> I use
         </h1>
-        <Toolstack />
+        <Toolstack /> */}
 
-        <Github />
+        {/* <Github /> */}
       </Container>
     </Container>
   );
