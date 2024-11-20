@@ -8,12 +8,81 @@ import {
   AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
+import Button from "react-bootstrap/Button";
+import { Link, useNavigate } from "react-router-dom";
+import Type from "./Type";
+import homeLogo from "../../Assets/home-main.svg";
 
 function Home2() {
+  const navigate = useNavigate(); // Correct naming for useNavigate
+  console.log("Home component mounted");
+
   return (
     <Container fluid className="home-about-section" id="about">
       <Container>
-        <Row>
+      <Container className="home2-header">
+      <Row>
+        <Col md={7} className="home-header">
+          <h1 style={{ paddingBottom: 15 }} className="heading">
+            Hi There!{" "}
+            <span className="wave" role="img" aria-labelledby="wave">
+              👋🏻
+            </span>
+          </h1>
+
+          <h1 className="heading-name">
+            I'm
+            <strong className="main-name"> Claire Li</strong>
+          </h1>
+
+          <div style={{ padding: 50, textAlign: "left" }}>
+            <Type />
+          </div>
+          
+          <div className="header-buttons">
+            <Button
+              className="m-2"
+              style={{
+                padding: "10px 20px",         // Custom padding
+                fontSize: "16px",         // Font size
+              }}
+              onClick={() =>  navigate("/about")}
+            >
+              About
+            </Button>
+             {/* Use navigate function instead of setting state */}
+          <Button
+            variant="primary"
+            className="m-2"
+            style={{
+              padding: "10px 20px",         // Custom padding
+              fontSize: "16px",             // Font size
+            }}
+            onClick={() => {
+              console.log("Button clicked, navigating to /project");
+              navigate("/project");
+            }}
+          >
+            Projects
+          </Button>
+          </div>
+          
+        </Col>
+
+        <Col md={5} style={{ paddingBottom: 20 }}>
+          <img
+            src={homeLogo}
+            alt="home pic"
+            className="img-fluid"
+            style={{ maxHeight: "500px", 
+              verticalAlign: "bottom" 
+            }}
+          />
+        </Col>
+      </Row>
+      </Container>
+
+        {/* <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
@@ -57,8 +126,8 @@ function Home2() {
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
-        </Row>
-        <Row>
+        </Row> */}
+        {/* <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
@@ -75,16 +144,7 @@ function Home2() {
                   <AiFillGithub />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://twitter.com/Soumyajit4419"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="icon-colour  home-social-icons"
-                >
-                  <AiOutlineTwitter />
-                </a>
-              </li>
+              
               <li className="social-icons">
                 <a
                   href="https://www.linkedin.com/in/soumyajit4419/"
@@ -95,19 +155,19 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-              <li className="social-icons">
-                <a
-                  href="https://www.instagram.com/soumyajit4419"
+              <li className="social-icons"> {/* CHANGE TO EMAIL */}
+                {/* <a
+                  href="https://twitter.com/Soumyajit4419"
                   target="_blank"
                   rel="noreferrer"
-                  className="icon-colour home-social-icons"
+                  className="icon-colour  home-social-icons"
                 >
-                  <AiFillInstagram />
+                  <AiOutlineTwitter />
                 </a>
               </li>
             </ul>
           </Col>
-        </Row>
+        </Row>  */}
       </Container>
     </Container>
   );
