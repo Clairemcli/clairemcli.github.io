@@ -481,6 +481,7 @@ div.col-md-5 {
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-color: var(--bg);
+  min-height: 860px;
 }
 
 .project-card {
@@ -640,11 +641,12 @@ div.col-md-5 {
 
 .resume-section {
   position: relative !important;
-  padding-top: 110px !important;
+  padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
-  color: white !important;
+  color: var(--dark-purple) !important;
+  background-color: var(--bg);
 }
+
 
 .resume {
   padding-top: 50px;
@@ -688,7 +690,7 @@ div.col-md-5 {
 .resume .resume-item .resume-title {
   line-height: 18px;
   font-size: 0.9em;
-  background: #5234795d;
+  background: var(--bg);
   padding: 8px 15px;
   display: inline-block;
   font-weight: 600;

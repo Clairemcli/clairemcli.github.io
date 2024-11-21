@@ -1,16 +1,26 @@
-import React from "react";
+import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import ProjectCard from "./ProjectCards";
-import Particle from "../Particle";
-import leaf from "../../Assets/Projects/leaf.png";
-import emotion from "../../Assets/Projects/emotion.png";
-import bruinai from "../../Assets/Projects/bruinai.png";
+import ProjectDetailsModal from "./ProjectDetailsModal";
 import quantumviz from "../../Assets/Projects/quantumviz.png";
-import chatify from "../../Assets/Projects/chatify.png";
-import suicide from "../../Assets/Projects/suicide.png";
+import quantumviz1 from "../../Assets/Projects/quantumviz1.png";
+import quantumviz2 from "../../Assets/Projects/quantumviz2.png";
+import quantumviz3 from "../../Assets/Projects/quantumviz3.png";
+import quantumviz4 from "../../Assets/Projects/quantumviz4.png";
 import gohelpme from "../../Assets/Projects/gohelpme.png";
+import bruinai from "../../Assets/Projects/bruinai.png";
 
 function Projects() {
+  // State to manage modal visibility and selected project data
+  const [modalShow, setModalShow] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
+
+  // Function to handle project card click
+  const handleCardClick = (projectData) => {
+    setSelectedProject(projectData); // Set selected project data
+    setModalShow(true); // Show the modal
+  };
+
   return (
     <Container fluid className="project-section">
       <Container>
@@ -27,8 +37,13 @@ function Projects() {
               isBlog={false}
               title="QuantumViz"
               description="Quantum circuit designer using LLM, RAG, and automatic web surfer that scrapes circuit diagrams off papers on arXiv and converts them to IBM Qiskit code."
-              ghLink="https://github.com/soumyajit4419/Chatify"
-              demoLink="https://chatify-49.web.app/"
+              onClick={() =>
+                handleCardClick({
+                  title: "QuantumViz",
+                  description: "Quantum circuit designer using LLM, RAG, and automatic web surfer that scrapes circuit diagrams off papers on arXiv and converts them to IBM Qiskit code.",
+                  images: [quantumviz,quantumviz1,quantumviz2,quantumviz3,quantumviz4], // Add more images if available
+                })
+              }
             />
           </Col>
 
@@ -38,8 +53,15 @@ function Projects() {
               isBlog={false}
               title="GoHelpMe"
               description="GoHelpMe is a full stack web application that connects users interested in volunteering with those who are trying to organize events."
-              ghLink="https://github.com/soumyajit4419/Bits-0f-C0de"
-              demoLink="https://blogs.soumya-jit.tech/"
+              onClick={() =>
+                handleCardClick({
+                  title: "GoHelpMe",
+                  description: "GoHelpMe is a full stack web application that connects users interested in volunteering with those who are trying to organize events.",
+                  images: [gohelpme],
+                  buttonText: "Github",
+                  link: "https://github.com/fahimWad/GoHelpMe",
+                })
+              }
             />
           </Col>
 
@@ -49,45 +71,27 @@ function Projects() {
               isBlog={false}
               title="Bruin AI Website"
               description="Web design for Bruin AI, a leading AI club at UCLA that works with industry leaders on AI and consulting projects."
-              ghLink="https://github.com/soumyajit4419/Editor.io"
-              demoLink="https://editor.soumya-jit.tech/"              
+              onClick={() =>
+                handleCardClick({
+                  title: "Bruin AI Website",
+                  description: "Web design for Bruin AI, a leading AI club at UCLA that works with industry leaders on AI and consulting projects.",
+                  images: [bruinai],
+                  buttonText: "Visit",
+                  link: "https://www.bruinai.org/",
+                })
+              }
             />
           </Col>
-{/* 
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={leaf}
-              isBlog={false}
-              title="Plant AI"
-              description="Used the plant disease dataset from Kaggle and trained a image classifer model using 'PyTorch' framework using CNN and Transfer Learning with 38 classes of various plant leaves. The model was successfully able to detect diseased and healthy leaves of 14 unique plants. I was able to achieve an accuracy of 98% by using Resnet34 pretrained model."
-              ghLink="https://github.com/soumyajit4419/Plant_AI"
-              demoLink="https://plant49-ai.herokuapp.com/"
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={suicide}
-              isBlog={false}
-              title="Ai For Social Good"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
-              ghLink="https://github.com/soumyajit4419/AI_For_Social_Good"
-              // demoLink="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley" <--------Please include a demo link here
-            />
-          </Col>
-
-          <Col md={4} className="project-card">
-            <ProjectCard
-              imgPath={emotion}
-              isBlog={false}
-              title="Face Recognition and Emotion Detection"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
-              ghLink="https://github.com/soumyajit4419/Face_And_Emotion_Detection"
-              // demoLink="https://blogs.soumya-jit.tech/"      <--------Please include a demo link here 
-            />
-          </Col> */}
         </Row>
+
+        {/* Render the modal */}
+        {selectedProject && (
+          <ProjectDetailsModal
+            show={modalShow}
+            onHide={() => setModalShow(false)}
+            data={selectedProject}
+          />
+        )}
       </Container>
     </Container>
   );
