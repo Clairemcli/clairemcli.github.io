@@ -81,8 +81,8 @@ button:focus {
 .sticky {
   background-color: var(--bg) !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px #d4c9b4 !important;
-  backdrop-filter: blur(20px) !important;
+  box-shadow: 0px 10px 10px 0px #e8e3da !important;
+  backdrop-filter: blur(10px) !important;
 }
 
 .navbar {
@@ -344,6 +344,10 @@ div.col-md-5 {
   }
 }
 
+.home-page {
+  min-height: 860px !important;
+  background-color: var(--bg);
+}
 .home-about-section {
   position: relative;
   padding-bottom: 70px !important;
@@ -476,7 +480,7 @@ div.col-md-5 {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
-  background-image: var(--section-background-color) !important;
+  background-color: var(--bg);
 }
 
 .project-card {
@@ -489,9 +493,9 @@ div.col-md-5 {
 
 .project-card-view {
   box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
-  color: white !important;
+  color: var(--dark-purple) !important;
   background-color: transparent !important;
-  opacity: 0.9 !important;
+  opacity: 1 !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
@@ -534,7 +538,6 @@ div.col-md-5 {
 
 .card-img-top {
   padding: 20px !important;
-  opacity: 0.8 !important;
   border-radius: 10px !important;
 }
 
