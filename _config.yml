@@ -1,1 +1,73 @@
+# Basic Settings
+title: "My Portfolio Site"
+description: "Protfolio website"
+baseurl: "clairemcli.github.io" 
+url: "https://clairemcli.github.io" 
+theme: jekyll-theme-primer # The Jekyll theme you're using
 
+# Build Settings
+markdown: kramdown # The markdown processor (default is kramdown)
+permalink: pretty # URL structure, options: pretty, date, none
+paginate: 10 # Number of posts per page if using pagination
+paginate_path: "/page:num" # URL structure for paginated pages
+
+# Author Information
+author:
+  name: "Claire Li"
+  email: "clairemcli@ucla.edu"
+  url: "https://clairemcli.github.io"
+
+# # Plugins (Optional)
+# plugins:
+#   - jekyll-seo-tag
+#   - jekyll-paginate
+#   - jekyll-feed
+#   - jekyll-sitemap
+
+# # Collections (Optional)
+# collections:
+#   my_collection:
+#     output: true
+#     permalink: /my_collection/:path/
+
+# # Defaults for Collections or Posts (Optional)
+# defaults:
+#   - scope:
+#       path: ""
+#       type: "posts"
+#     values:
+#       layout: "post"
+#       author: "John Doe"
+
+# Markdown Settings
+kramdown:
+  input: GFM # GitHub Flavored Markdown
+  auto_ids: true
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Exclusions (Optional)
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+
+# Include (Optional)
+include:
+  - _pages
+
+# Configuring URL and File Structure
+permalink: /:categories/:title/ # URL structure for posts
+relative_permalinks: false
+
+# Output File Configuration
+markdown_ext: "markdown,mkdn,mkdn,mkd,md"
+
+# Front Matter Defaults (Optional)
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
