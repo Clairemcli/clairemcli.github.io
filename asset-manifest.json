@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/static/css/main.1c492778.css",
+    "main.js": "/static/js/main.08eec8ea.js",
+    "static/js/415.4d6acbeb.chunk.js": "/static/js/415.4d6acbeb.chunk.js",
+    "static/js/787.1ed0c42c.chunk.js": "/static/js/787.1ed0c42c.chunk.js",
+    "static/media/bruinai.png": "/static/media/bruinai.24d227abf9e058485553.png",
+    "static/media/about.png": "/static/media/about.2c2a75e78244b7b6d294.png",
+    "static/media/quantumviz.png": "/static/media/quantumviz.84ae89e97fbae6540fb5.png",
+    "static/media/quantumviz2.png": "/static/media/quantumviz2.27976a89b9264282df75.png",
+    "static/media/quantumviz3.png": "/static/media/quantumviz3.6e55f3356e21322d3a62.png",
+    "static/media/quantumviz4.png": "/static/media/quantumviz4.9a2b493d598e4b99eed9.png",
+    "static/media/quantumviz1.png": "/static/media/quantumviz1.8fa68091098d9c3b0283.png",
+    "static/media/Claire_Li_Resume.pdf": "/static/media/Claire_Li_Resume.2edb6b7007cfe71e2935.pdf",
+    "static/media/avatar.svg": "/static/media/avatar.541f8179af8209ce03ccf2178fe62dbf.svg",
+    "static/media/home-main.svg": "/static/media/home-main.fde2047a28b474a9aa699542d0ae6a64.svg",
+    "static/media/gohelpme.png": "/static/media/gohelpme.6770a82846da81493c7b.png",
+    "static/media/home-bg.jpg": "/static/media/home-bg.dc52d5d40a40b13154b0.jpg",
+    "static/media/pre.svg": "/static/media/pre.d4812f51c8c80976eaab.svg",
+    "index.html": "/index.html",
+    "main.1c492778.css.map": "/static/css/main.1c492778.css.map",
+    "main.08eec8ea.js.map": "/static/js/main.08eec8ea.js.map",
+    "415.4d6acbeb.chunk.js.map": "/static/js/415.4d6acbeb.chunk.js.map",
+    "787.1ed0c42c.chunk.js.map": "/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1c492778.css",
+    "static/js/main.08eec8ea.js"
+  ]
+}
