@@ -1,10 +1,9 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
-import homeLogo from "../../Assets/home-main.svg";
-import Particle from "../Particle";
+//import { Container, Row, Col } from "react-bootstrap";
+//import homeLogo from "../../Assets/home-main.svg";
 import Home2 from "./Home2";
-import Type from "./Type";
-import Button from "react-bootstrap/Button";
+//import Type from "./Type";
+//import Button from "react-bootstrap/Button";
 import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
