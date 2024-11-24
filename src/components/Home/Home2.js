@@ -9,7 +9,7 @@ import { Container, Row, Col } from "react-bootstrap";
 // } from "react-icons/ai";
 // import { FaLinkedinIn } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import Type from "./Type";
 import homeLogo from "../../Assets/home-main.svg";
 
