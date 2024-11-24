@@ -4,10 +4,10 @@ import React from "react";
 import Home2 from "./Home2";
 //import Type from "./Type";
 //import Button from "react-bootstrap/Button";
-import { Link, useNavigate } from "react-router-dom";
+//import { Link, useNavigate } from "react-router-dom";
 
 function Home() {
-  const navigate = useNavigate(); // Correct naming for useNavigate
+  //const navigate = useNavigate(); // Correct naming for useNavigate
   console.log("Home component mounted");
 
   
