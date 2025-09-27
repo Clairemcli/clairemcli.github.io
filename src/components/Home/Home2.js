@@ -4,8 +4,8 @@ import myImg from "../../Assets/avatar.svg";
 import Tilt from "react-parallax-tilt";
 import {
   AiFillGithub,
-  AiOutlineTwitter,
-  AiFillInstagram,
+  // AiOutlineTwitter,
+  // AiFillInstagram,
 } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
@@ -154,8 +154,8 @@ function Home2() {
                 >
                   <FaLinkedinIn />
                 </a>
-              </li>
-              <li className="social-icons"> {/* CHANGE TO EMAIL */}
+              {/* </li>
+              <li className="social-icons"> {/* CHANGE TO EMAIL }
                 <a
                   href="https://twitter.com/Soumyajit4419"
                   target="_blank"
@@ -164,7 +164,7 @@ function Home2() {
                 >
                   <AiOutlineTwitter />
                 </a>
-              </li>
+              </li> */}
             </ul>
           </Col>
         </Row> 
