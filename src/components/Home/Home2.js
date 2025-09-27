@@ -1,13 +1,13 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-// import myImg from "../../Assets/avatar.svg";
-// import Tilt from "react-parallax-tilt";
-// import {
-//   AiFillGithub,
-//   AiOutlineTwitter,
-//   AiFillInstagram,
-// } from "react-icons/ai";
-// import { FaLinkedinIn } from "react-icons/fa";
+import myImg from "../../Assets/avatar.svg";
+import Tilt from "react-parallax-tilt";
+import {
+  AiFillGithub,
+  AiOutlineTwitter,
+  AiFillInstagram,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import Button from "react-bootstrap/Button";
 import { useNavigate } from "react-router-dom";
 import Type from "./Type";
@@ -69,7 +69,7 @@ function Home2() {
           
         </Col>
 
-        <Col md={5} style={{ paddingBottom: 20 }}>
+        <Col md={5} style={{ paddingBottom: 40 }}>
           <img
             src={homeLogo}
             alt="home pic"
@@ -82,7 +82,7 @@ function Home2() {
       </Row>
       </Container>
 
-        {/* <Row>
+        <Row>
           <Col md={8} className="home-about-description">
             <h1 style={{ fontSize: "2.6em" }}>
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
@@ -126,8 +126,8 @@ function Home2() {
               <img src={myImg} className="img-fluid" alt="avatar" />
             </Tilt>
           </Col>
-        </Row> */}
-        {/* <Row>
+        </Row> 
+        <Row>
           <Col md={12} className="home-about-social">
             <h1>FIND ME ON</h1>
             <p>
@@ -156,7 +156,7 @@ function Home2() {
                 </a>
               </li>
               <li className="social-icons"> {/* CHANGE TO EMAIL */}
-                {/* <a
+                <a
                   href="https://twitter.com/Soumyajit4419"
                   target="_blank"
                   rel="noreferrer"
@@ -167,7 +167,7 @@ function Home2() {
               </li>
             </ul>
           </Col>
-        </Row>  */}
+        </Row> 
       </Container>
     </Container>
   );
