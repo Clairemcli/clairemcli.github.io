@@ -154,8 +154,8 @@ function Home2() {
                 >
                   <FaLinkedinIn />
                 </a>
-              {/* </li>
-              <li className="social-icons"> {/* CHANGE TO EMAIL }
+              </li>
+              { /*<li className="social-icons"> {/* CHANGE TO EMAIL }
                 <a
                   href="https://twitter.com/Soumyajit4419"
                   target="_blank"
