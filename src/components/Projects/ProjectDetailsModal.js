@@ -24,7 +24,7 @@ function ProjectDetailsModal({ show, onHide, data }) {
         {/* Slideshow component for project images */}
         <AwesomeSlider className="modal-slider">
           {images.map((image, index) => (
-            <div key={index} data-src={image} />
+            <div key={index} data-src={image} className="project-pic" />
           ))}
         </AwesomeSlider>
 

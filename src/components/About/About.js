@@ -9,7 +9,7 @@ function About() {
   return (
     <Container fluid className="about-section">
       <Container>
-        <Row style={{ justifyContent: "center", padding: "0px" }}>
+        <Row className="about-row" style={{ justifyContent: "center", padding: "0px" }}>
           <Col
             md={7}
             style={{

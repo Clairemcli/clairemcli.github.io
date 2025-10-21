@@ -8,7 +8,7 @@ function Type() {
         strings: [
           "Software Engineering",
           "Design",
-          "Embedded Systems Development",
+          "Embedded Systems",
           "Product Management",
           "Full Stack Development",
         ],

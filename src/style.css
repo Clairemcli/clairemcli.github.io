@@ -15,6 +15,7 @@ html {
   --blue: #6C91A5;
   --bg: #FAF7F3;
   --dark-purple: #4A4774;
+  --bright-purple: #8a49a8;
 }
 
 .purple {
@@ -257,9 +258,6 @@ button:focus {
   padding-left: 40px;
   padding-right: 40px !important;
 }
-.home-header {
-  padding-top: 80px !important;
-}
 
 /* button */
 .header-buttons .m-2 {
@@ -271,6 +269,11 @@ button:focus {
   border-width: 2px;
   border-color: #bbb9ea !important;
   margin-right: 15px !important;
+}
+
+.home-social-icons {
+  padding-left: 40px;
+  padding-right: 40px !important;
 }
 
 .home-section {
@@ -287,6 +290,11 @@ button:focus {
   padding: 9rem 0 2rem !important;
   color: #4A4774;
   text-align: left;
+  height: 70vh !important;
+}
+
+.home2-header {
+  padding-top: 100px !important;
 }
 
 .heading {
@@ -295,8 +303,65 @@ button:focus {
 }
 
 .heading-name {
-  font-size: 4em !important;
+  font-size: 5em !important;
   padding-left: 45px !important;
+}
+
+/* Responsive text scaling */
+@media (max-width: 1200px) {
+
+  .heading {
+    font-size: 2.2em !important;
+  }
+  .heading-name {
+    font-size: 4.5em !important;
+  }
+  .Typewriter__wrapper {
+    font-size: 2.8em !important;
+  }
+}
+
+@media (max-width: 992px) {
+  .heading {
+    font-size: 2em !important;
+  }
+  .heading-name {
+    font-size: 4em !important;
+  }
+  .Typewriter__wrapper {
+    font-size: 2.5em !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 1.8em !important;
+    padding-left: 30px !important;
+  }
+  .heading-name {
+    font-size: 3.5em !important;
+    padding-left: 25px !important;
+  }
+  .Typewriter__wrapper {
+    font-size: 2.2em !important;
+    padding-left: 20px !important;
+  }
+  
+  /* Reduce left padding for social icons on mobile */
+  .social-icons {
+    padding-left: 20px !important;
+  }
+  
+  /* Fix typewriter container padding on mobile */
+  .typewriter-container {
+    padding: 20px 20px 20px 20px !important;
+    margin-bottom: 10px !important;
+  }
+  
+  /* Add more spacing between typewriter and social icons on mobile */
+  .social-icons {
+    margin-top: 30px !important;
+  }
 }
 
 .main-name {
@@ -312,7 +377,7 @@ div.col-md-5 {
 }
 
 .Typewriter__wrapper {
-  font-size: 2.2em !important;
+  font-size: 3em !important;
   color: var(--blue) !important;
   font-weight: 600 !important;
 }
@@ -329,6 +394,47 @@ div.col-md-5 {
   }
   .Typewriter__cursor {
     display: none !important;
+  }
+  
+  /* Social icons responsive scaling */
+  .social-icons a {
+    font-size: 28px !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .heading {
+    font-size: 1.5em !important;
+    padding-left: 20px !important;
+  }
+  .heading-name {
+    font-size: 3em !important;
+    padding-left: 15px !important;
+  }
+  .Typewriter__wrapper {
+    font-size: 1.8em !important;
+    padding-left: 15px !important;
+  }
+  
+  /* Smaller social icons on mobile */
+  .social-icons a {
+    font-size: 24px !important;
+  }
+  
+  /* Further reduce left padding for very small screens */
+  .social-icons {
+    padding-left: 15px !important;
+  }
+  
+  /* Further reduce typewriter padding on very small screens */
+  .typewriter-container {
+    padding: 15px 15px 15px 0px !important;
+    margin-bottom: 15px !important;
+  }
+  
+  /* Even more spacing on very small screens */
+  .social-icons {
+    margin-top: 70px !important;
   }
 }
 
@@ -779,3 +885,89 @@ div.col-md-5 {
 .fork-btn-inner::after {
   display: none !important;
 }
+
+.project-section {
+  padding-bottom: 8rem !important;
+}
+
+/* Project picture styling */
+.project-picture-top {
+  max-width: 100% !important;
+  width: auto !important;
+  /* height: 100px !important; */
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 2rem !important;
+}
+
+.project-picture-bottom {
+  max-width: 100% !important;
+  width: auto !important;
+  /* height: 100px !important; */
+  object-fit: cover !important;
+  border-radius: 8px !important;
+  margin-top: 2rem !important;
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-bottom: 10px !important;
+}
+
+.project-card {
+  padding-bottom: 1rem !important;
+}
+
+/* Project card div styling */
+.project-card-div {
+  background-color: var(--bg) !important;
+  color: var(--dark-purple) !important;
+  border-radius: 10px !important;
+  padding: 0rem !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
+  box-shadow: none !important;
+  transition: all 0.5s ease 0s !important;
+  cursor: pointer !important;
+  text-align: left !important;
+}
+
+.project-card-div:hover {
+  transform: scale(1.02) !important;
+  overflow: hidden !important;
+  box-shadow: none !important;
+}
+
+.project-title {
+  font-weight: bold !important;
+}
+
+.project-description {
+  text-align: left !important;
+  margin-bottom: 0 !important;
+}
+
+.project-year-container {
+  display: flex !important;
+  align-items: center !important;
+  margin: 0.5rem 0 0.75rem 0 !important;
+  gap: 10px !important;
+}
+
+.project-divider {
+  border-top: 3px solid var(--bright-purple) !important;
+  margin: 0 !important;
+  width: 42px !important;
+  flex-shrink: 0 !important;
+}
+
+.project-year {
+  font-size: 1rem !important;
+  margin: 0 !important;
+  color: var(--dark-purple) !important;
+}
+
